@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>vessel.png</file>
+        <file>vesselMoving.png</file>
+        <file>cannonball.png</file>
+        <file>island.png</file>
+        <file>enemyMoving.png</file>
+        <file>cannonball_big.png</file>
+        <file>player2vessel.png</file>
+    </qresource>
+</RCC>
