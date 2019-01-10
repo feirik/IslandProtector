@@ -1,6 +1,0 @@
-#ifndef MOVEFUNCTIONS_H
-#define MOVEFUNCTIONS_H
-
-
-
-#endif // MOVEFUNCTIONS_H
