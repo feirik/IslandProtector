@@ -82,7 +82,7 @@ game::game()
 
     // Initialize widget positions, health widget is at default 0,0
     m_scoreWidget->setPos(600,0);
-    m_infoWidget->setPos(270,50);
+    m_infoWidget->setPos(300,30);
 
     m_healthWidget->updateWidget(getHealth());
     m_scoreWidget->updateWidget(getScore());
