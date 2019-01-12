@@ -3,6 +3,8 @@ Island Protector project
 Simple 2D 2 player game created in Qt. Player 1 uses the keyboard arrow keys and space, player 2 uses the mouse. 
 Player 2 follows player 1 path with a 2 second delay.
 
+![Game overview](https://github.com/feirik/IslandProtector/blob/master/README%20images/GameOverview.png)
+
 Created using Qt Creator 4.6.1, MinGW 32bit compiler.
 
 **The main lessons learned for the project were:**
