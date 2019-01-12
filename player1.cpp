@@ -116,7 +116,7 @@ void player1::keyReleaseEvent(QKeyEvent *event)
     }
 }
 
-// Update player direction, acceleration and cannon firing based on combinations in keyPressArray
+// Update player1 direction, acceleration and cannon firing based on combinations in keyPressArray
 void player1::playerAction()
 {
     // Degrees of rotation per left/right key input
@@ -364,7 +364,7 @@ void player1::move()
         }
     }
 
-    // Push back player if at the bounds of scene
+    // Push back player1 if at the bounds of scene
     if(x()<0)
     {
         setDx(0.5);
@@ -385,7 +385,7 @@ void player1::move()
     }
 
     // Logging historical position, speed and angle of player1 for the last 2 seconds
-    // Logged position is currently not in use, but could be used for enabling/disabling player2 while game is running
+    // Logged x and y position is currently not in use, but could be used for enabling/disabling player2 while game is running
     m_xPosList.push_front(x());
     m_yPosList.push_front(y());
     m_dxList.push_front(getDx());
@@ -405,13 +405,13 @@ void player1::move()
     setPos(x()+getDx(), y()+getDy());
 }
 
-// Connected to loop timer to get player input in set intervals
+// Connected to loop timer to get user input in set intervals
 void player1::actionLoop()
 {
     playerAction();
 }
 
-// Connected to reload timer to set reload flag, allowing player to shoot
+// Connected to reload timer to set reload flag, allowing player1 to shoot
 void player1::reloadTime()
 {
     m_reloadFlag = 1;
@@ -440,12 +440,14 @@ void player1::decellerate()
     setDy(getDy()*0.95);
 }
 
+// Rotates pixmap an integer degrees in the counter clockwise direction
 void player1::rotateCCW(int degrees)
 {
     setAngle(getAngle()%360 - degrees);
     setRotation(getAngle());
 }
 
+// Rotates pixmap an integer degrees in the clockwise direction
 void player1::rotateCW(int degrees)
 {
     setAngle(getAngle()%360 + degrees);
