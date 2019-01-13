@@ -57,21 +57,25 @@ void island::spawnEnemy()
     {
         m_spawnTimer->start(4500);
     }
-    if(getEnemyCount() == 20)
+    else if(getEnemyCount() == 20)
     {
         m_spawnTimer->start(4000);
     }
-    if(getEnemyCount() == 30)
+    else if(getEnemyCount() == 30)
     {
         m_spawnTimer->start(3500);
     }
-    if(getEnemyCount() == 40)
+    else if(getEnemyCount() == 40)
     {
         m_spawnTimer->start(3000);
     }
-    if(getEnemyCount() == 50)
+    else if(getEnemyCount() == 50)
     {
         m_spawnTimer->start(2500);
+    }
+    else if(getEnemyCount() == 75)
+    {
+        m_spawnTimer->start(1500);
     }
 
     // Mem freed when enemy collides with players, island or is destroyed by projectiles

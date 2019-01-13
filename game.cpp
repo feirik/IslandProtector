@@ -80,7 +80,7 @@ game::game()
     m_scene->addItem(m_scoreWidget);
     m_scene->addItem(m_infoWidget);
 
-    // Initialize widget positions, health widget is at default 0,0
+    // Initialize widget positions, health widget is set to default (0,0) position
     m_scoreWidget->setPos(600,0);
     m_infoWidget->setPos(300,30);
 

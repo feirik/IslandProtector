@@ -29,21 +29,21 @@ enemy::enemy(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent)
     }
 
     // Right boarder
-    if(randomBoarder == 1)
+    else if(randomBoarder == 1)
     {
         int randomY = (rand()%70 * 10) - 100;
         setPos(900, randomY);
     }
 
     // Top boarder
-    if(randomBoarder == 2)
+    else if(randomBoarder == 2)
     {
         int randomX = (rand()%90 * 10) - 100;
         setPos(randomX, -100);
     }
 
     // Bottom boarder
-    if(randomBoarder == 3)
+    else if(randomBoarder == 3)
     {
         int randomX = (rand()%90 * 10) - 100;
         setPos(randomX, 700);
@@ -63,9 +63,6 @@ enemy::enemy(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent)
     if(timerVar == nullptr)
     {
         qDebug() << "Failed to allocate enemy timerVar memory";
-
-        delete gameVar;
-        QApplication::quit();
     }
 
     connect(timerVar,SIGNAL(timeout()),this,SLOT(moveFoward()));
